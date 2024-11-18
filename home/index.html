@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Phair - Professional Coach</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Joe Phair</div>
+            <button class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                </svg>
+            </button>
+            <ul>
+                <li><a href="/home" class="active">Home</a></li>
+                <li><a href="/coaching">1:1 Coaching</a></li>
+                <li><a href="/cohort">Cohort Program</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Transform Your Potential with Joe Phair</h1>
+            <p class="subtitle">Expert coaching to help you achieve your goals and unlock your true capabilities</p>
+            <div class="hero-images">
+                <img src="/public/joe1.png" alt="Joe Phair Professional Photo 1" class="hero-image">
+                <img src="/public/joe2.png" alt="Joe Phair Professional Photo 2" class="hero-image">
+            </div>
+        </section>
+
+        <section class="offerings">
+            <div class="card">
+                <h2>1:1 Coaching</h2>
+                <p>Personalized coaching sessions tailored to your specific needs and goals.</p>
+                <a href="/coaching" class="cta-button">Learn More</a>
+            </div>
+
+            <div class="card">
+                <h2>2024 Cohort</h2>
+                <p>Join our exclusive group program starting January 1st, 2024.</p>
+                <a href="/cohort" class="cta-button">Join the Cohort</a>
+            </div>
+
+            <div class="card">
+                <h2>Newsletter</h2>
+                <p>Get weekly insights and tips directly in your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Joe Phair. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

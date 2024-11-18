@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:1 Coaching with Joe Phair</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Joe Phair</div>
+            <button class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                </svg>
+            </button>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/coaching" class="active">1:1 Coaching</a></li>
+                <li><a href="/cohort">Cohort Program</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="coaching-hero">
+            <h1>1:1 Coaching Program</h1>
+            <p class="subtitle">Personalized guidance to accelerate your growth</p>
+        </section>
+
+        <section class="coaching-details">
+            <div class="offering">
+                <h2>What You'll Get</h2>
+                <ul>
+                    <li>Weekly 1-hour private coaching sessions</li>
+                    <li>Personalized action plans</li>
+                    <li>Direct access via email</li>
+                    <li>Progress tracking and accountability</li>
+                </ul>
+            </div>
+
+            <div class="booking">
+                <h2>Ready to Start?</h2>
+                <p>Schedule a free consultation call to discuss your goals</p>
+                <a href="#" class="cta-button">Book Your Call</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Joe Phair. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
