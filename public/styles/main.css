@@ -31,6 +31,7 @@ body {
 h1, h2, h3 {
     line-height: 1.2;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 h1 {
@@ -199,7 +200,7 @@ nav a.active:after {
 
 /* Forms */
 .newsletter-form {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 input[type="email"] {
@@ -341,4 +342,133 @@ footer {
 
 .card:nth-child(3) {
     animation-delay: 0.4s;
+}
+
+/* Program Highlights Section */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.highlight-card {
+    background: var(--background);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Pillars Section */
+.pillars {
+    background: var(--accent);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.pillar-item {
+    background: var(--background);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+    border: 1px solid #e5e7eb;
+}
+
+.pillar-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Program Structure Section */
+.structure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.structure-card {
+    background: var(--background);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.structure-card ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.structure-card li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.structure-card li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+/* Enrollment Section */
+.enrollment {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background: linear-gradient(to bottom, var(--accent), var(--background));
+    margin-top: 4rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1.5rem 0;
+    color: var(--primary);
+}
+
+.enrollment .cta-button {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Update existing sections to include centered headings */
+.program-highlights,
+.pillars,
+.structure-grid {
+    text-align: center;
+}
+
+.program-highlights h2,
+.pillars h2,
+.structure-grid h2 {
+    margin-bottom: 2rem;
 } 
