@@ -80,12 +80,16 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text);
-    text-decoration: none;
     transition: var(--transition);
 }
 
-.logo:hover {
+.logo a {
+    text-decoration: none;
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.logo a:hover {
     color: var(--primary);
 }
 
