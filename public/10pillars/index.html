@@ -37,6 +37,40 @@
         @media (max-width: 768px) {
             .custom-lead-magnet {
                 grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .custom-hero-image {
+                height: auto;
+                padding: 1rem;
+                order: 2;
+            }
+            
+            .custom-hero-image img {
+                max-height: 40vh;
+            }
+            
+            .custom-container.custom-content-wrapper {
+                padding: 1.5rem;
+                order: 1;
+            }
+
+            .custom-content-wrapper h1 {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .custom-subtitle {
+                margin: 0.75rem 0 0.5rem 0;
+            }
+
+            .custom-bullet-points {
+                margin: 0.5rem 0;
+            }
+
+            .custom-bullet-points li {
+                margin-bottom: 0.5rem;
             }
         }
 
@@ -87,6 +121,7 @@
             text-align: left;
             margin-left: 0;  /* Remove auto margins */
             margin-right: 0;
+            padding: 0px;
         }
 
         em {
@@ -95,7 +130,7 @@
 
         .custom-newsletter-form {
             text-align: left;
-            margin-top: 0rem;
+            margin-top: 0px;
         }
 
         .custom-hero-image {
@@ -143,7 +178,7 @@
         }
 
         .custom-content-wrapper .custom-subtitle {
-            margin: 1.5rem 0 2rem 0;
+            margin: 1.5rem 0 1rem 0;
         }
 
         .custom-bullet-points {
@@ -157,6 +192,17 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-height: 100vh;
+        }
+
+        /* Override inline styles for the form */
+        .seva-form.formkit-form[data-uid="0ae382462f"] {
+            padding-top: 0 !important; /* Force removal of top padding */
+            margin-top: 0 !important;
+        }
+
+        /* Target the specific form and its container */
+        .seva-form.formkit-form[data-uid="0ae382462f"] > div[data-style="clean"] {
+            padding-top: 0 !important; /* Remove top padding */
         }
     </style>
 </head>
