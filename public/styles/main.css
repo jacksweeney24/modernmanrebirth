@@ -888,9 +888,7 @@ footer p {
 
 @font-face {
     font-family: 'Viking';
-    src: url('/fonts/viking.woff2') format('woff2'),
-         url('/fonts/viking.woff') format('woff'),
-         url('/fonts/viking.ttf') format('truetype');
+    src: url('../fonts/Viking.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
