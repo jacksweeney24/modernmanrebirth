@@ -83,6 +83,7 @@ h1 {
         var(--text) 100%
     );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% auto;
     animation: shine 8s linear infinite;
@@ -422,11 +423,17 @@ footer {
     display: none;
     background: none;
     border: none;
+    color: var(--text);
     cursor: pointer;
     padding: 0.5rem;
+    transition: var(--transition);
 }
 
-/* Responsive Design */
+.mobile-menu-btn:hover {
+    color: var(--primary);
+}
+
+/* Mobile Responsive Styles */
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
@@ -438,12 +445,12 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--background);
         flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        border: 1px solid var(--primary);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        gap: 0;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--primary);
+        padding: 1rem 0;
     }
 
     nav ul.show {
@@ -452,13 +459,16 @@ footer {
 
     nav ul li {
         width: 100%;
-        text-align: center;
     }
 
     nav ul li a {
         display: block;
-        padding: 1rem 0;
-        font-size: 1.2rem;
+        padding: 1rem 1.5rem;
+        text-align: center;
+    }
+
+    nav ul li a:hover {
+        background: rgba(196, 169, 98, 0.1);
     }
 
     .hero, .coaching-hero, .cohort-hero {
@@ -607,6 +617,19 @@ footer {
 .pillar-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.pillar-item i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.pillar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* Program Structure Section */
@@ -892,4 +915,75 @@ footer p {
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+/* General section styling */
+section {
+    padding: 6rem 2rem; /* Vertical and horizontal padding */
+    margin: 0 auto;
+    max-width: 1200px; /* Contains the content width */
+}
+
+/* Grid layouts for cards */
+.structure-grid,
+.highlights-grid,
+.pillars-grid {
+    display: grid;
+    gap: 2rem; /* Uniform gap between grid items */
+    margin-top: 3rem; /* Space after section headers */
+}
+
+/* Section headers */
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem; /* Consistent space below headers */
+}
+
+/* Card styling */
+.structure-card,
+.highlight-card,
+.pillar-item {
+    padding: 2rem;
+    border-radius: 8px;
+    height: 100%; /* Ensures uniform height */
+}
+
+/* Responsive grid layouts */
+@media (min-width: 768px) {
+    .structure-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Add breathing room between sections */
+section + section {
+    margin-top: 2rem;
+}
+
+/* Specific styles for main page hero image */
+.hero .hero-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding: 0 1.5rem;
+}
+
+.hero .hero-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Maintain grid layout for other pages */
+.cohort-hero + .hero-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    padding: 0 1rem;
 } 
