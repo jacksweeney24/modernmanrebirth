@@ -51,6 +51,11 @@
                 </div>
                 
                 <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
                     <label for="goals">What would you like to work on with Joe?</label>
                     <textarea id="goals" name="goals" rows="4" required></textarea>
                 </div>
@@ -83,10 +88,11 @@
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
             goals: document.getElementById('goals').value
         };
         
-        fetch('https://script.google.com/macros/s/AKfycbx4Ynk2bWVVCIVAw4KLQylE9bZvCCHxpLva8Gnv_Uv3r1zX3nabVt11iSs09TSqSXPmxg/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbzMcXCvQJvUauwMSJM8H2PFpTRgXYOeHmFzH0qxtILx6FOZXjtlBp8mtm2YkwbjfrEiaw/exec', {
             method: 'POST',
             body: JSON.stringify(formData)
         })
