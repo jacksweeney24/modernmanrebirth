@@ -481,7 +481,7 @@ footer {
     }
 
     .hero, .coaching-hero, .cohort-hero {
-        padding: 4rem 1rem;
+        padding: 4rem 1rem 0 1rem;
     }
 
     .offerings {
@@ -1075,7 +1075,7 @@ section + section {
 }
 
 .about-joe {
-    padding: 4rem 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
 .about-content {
@@ -1175,7 +1175,7 @@ section + section {
 }
 
 .about-joe {
-    padding: 4rem 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
 .about-content {
@@ -1337,4 +1337,30 @@ section + section {
 .cta-button:disabled {
     opacity: 0.7;
     cursor: not-allowed;
+}
+
+.no-bottom-margin {
+    margin-bottom: 0;
+}
+
+.program-intro {
+    margin-top: 0;
+}
+
+.program-structure {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+}
+
+.about-joe {
+    padding: 2rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .program-structure {
+        padding: 3rem 1.5rem 1.5rem 1.5rem;
+    }
+    
+    .about-joe {
+        padding: 1.5rem 1.5rem;
+    }
 } 
