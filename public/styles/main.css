@@ -189,7 +189,7 @@ nav a.active:after {
 
 /* Hero Section */
 .hero, .coaching-hero, .cohort-hero {
-    padding: 6rem 1.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -538,11 +538,11 @@ footer {
 /* Program Highlights Section */
 .highlights-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 2rem 1.5rem;
     max-width: var(--max-width);
     margin: 0 auto;
+    padding: 2rem 1.5rem;
 }
 
 .highlight-card {
@@ -1261,4 +1261,79 @@ section + section {
     .pillars {
         padding: 3rem 1rem;
     }
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.coaching-form {
+    background: var(--accent);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--primary);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(196, 169, 98, 0.3);
+    border-radius: 0.5rem;
+    background: var(--background);
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.coaching-form .cta-button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.button-loader {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.cta-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 } 

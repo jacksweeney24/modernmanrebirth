@@ -5,123 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1:1 Coaching with Joe Phair</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="js/header-loader.js"></script>
 </head>
 <body>
-
     <main>
         <section class="coaching-hero">
             <h1>1:1 Coaching with Joe</h1>
             <p class="subtitle">Personalized guidance to accelerate your growth</p>
         </section>
 
-        <section class="offerings">
-            <div class="card">
-                <h2>What You'll Get</h2>
-                <ul>
-                    <li>Weekly 1-hour private coaching sessions</li>
-                    <li>Personalized action plans</li>
-                    <li>Direct access via email</li>
-                    <li>Progress tracking and accountability</li>
-                </ul>
+        <section class="highlights-grid">
+            <div class="highlight-card">
+                <i class="fas fa-video"></i>
+                <h3>Weekly Sessions</h3>
+                <p>1-hour private coaching sessions tailored to your needs</p>
             </div>
 
-            <div class="card">
-                <h2>Ready to Start?</h2>
-                <p>Schedule a free consultation call to discuss your goals</p>
-                <div class="button-container">
-                    <a href="#" class="button">Book Your Call</a>
-                </div>
+            <div class="highlight-card">
+                <i class="fas fa-road"></i>
+                <h3>Action Plans</h3>
+                <p>Personalized roadmap to achieve your goals</p>
             </div>
-        </section>
 
-        <section class="program-highlights">
-            <h2>The Coaching Process</h2>
-            <div class="highlights-grid">
-                <div class="highlight-card">
-                    <h3>Discovery Call</h3>
-                    <p>Free 30-minute consultation to discuss your goals and see if we're a good fit</p>
-                </div>
-                <div class="highlight-card">
-                    <h3>Goal Setting</h3>
-                    <p>Define clear objectives and create your personalized development plan</p>
-                </div>
-                <div class="highlight-card">
-                    <h3>Weekly Sessions</h3>
-                    <p>Regular coaching calls to work through challenges and build momentum</p>
-                </div>
-                <div class="highlight-card">
-                    <h3>Implementation</h3>
-                    <p>Put insights into action with structured accountability and support</p>
-                </div>
+            <div class="highlight-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Direct Access</h3>
+                <p>Priority email support between sessions</p>
             </div>
         </section>
 
-        <section class="pillars">
-            <h2>Areas We'll Focus On</h2>
-            <div class="pillars-grid">
-                <div class="pillar-item">
-                    <i class="fas fa-brain"></i>
-                    <h3>Personal Development</h3>
-                    <p>Build self-awareness, confidence, and emotional intelligence</p>
+        <section class="contact-form">
+            <h2>Get Started with Your Transformation</h2>
+            <p class="subtitle">Tell me about your goals and let's begin your journey</p>
+            
+            <form id="contactForm" class="coaching-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <div class="pillar-item">
-                    <i class="fas fa-heart"></i>
-                    <h3>Relationship Skills</h3>
-                    <p>Improve communication, boundaries, and authentic connections</p>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="pillar-item">
-                    <i class="fas fa-compass"></i>
-                    <h3>Life Purpose</h3>
-                    <p>Discover your values, mission, and meaningful direction</p>
+                
+                <div class="form-group">
+                    <label for="goals">What would you like to work on with Joe?</label>
+                    <textarea id="goals" name="goals" rows="4" required></textarea>
                 </div>
-                <div class="pillar-item">
-                    <i class="fas fa-bolt"></i>
-                    <h3>Masculine Energy</h3>
-                    <p>Develop healthy masculine traits and leadership qualities</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="program-structure">
-            <h2>Client Success Stories</h2>
-            <div class="structure-grid">
-                <div class="structure-card">
-                    <p class="quote">"[Client testimonial about transformation]"</p>
-                    <p class="author">- John D.</p>
-                </div>
-                <div class="structure-card">
-                    <p class="quote">"[Another client success story]"</p>
-                    <p class="author">- Michael S.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="program-structure">
-            <h2>Frequently Asked Questions</h2>
-            <div class="structure-grid">
-                <div class="structure-card">
-                    <h3>How long is the coaching program?</h3>
-                    <p>Most clients work with me for a minimum of 3 months to see lasting results.</p>
-                </div>
-                <div class="structure-card">
-                    <h3>How often do we meet?</h3>
-                    <p>We'll have weekly 1-hour sessions, plus email support between calls.</p>
-                </div>
-                <div class="structure-card">
-                    <h3>What's the investment?</h3>
-                    <p>Investment details are discussed during the free consultation call.</p>
-                </div>
-                <div class="structure-card">
-                    <h3>How do I know if this is right for me?</h3>
-                    <p>Book a free consultation call to discuss your situation and goals.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="enrollment">
-            <h2>READY TO TRANSFORM YOUR LIFE?</h2>
-            <a href="#" class="cta-button">SCHEDULE YOUR FREE CONSULTATION</a>
+                
+                <button type="submit" class="cta-button" id="submitButton">
+                    <span class="button-text">Submit</span>
+                    <span class="button-loader hidden"></span>
+                </button>
+            </form>
         </section>
     </main>
 
@@ -130,12 +68,43 @@
     </footer>
 
     <script>
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const nav = document.querySelector('nav ul');
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        mobileMenuBtn.addEventListener('click', () => {
-            nav.classList.toggle('show');
+        const submitButton = document.getElementById('submitButton');
+        const buttonText = submitButton.querySelector('.button-text');
+        const buttonLoader = submitButton.querySelector('.button-loader');
+        
+        // Show loading state
+        submitButton.disabled = true;
+        buttonText.textContent = 'Submitting...';
+        buttonLoader.classList.remove('hidden');
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            goals: document.getElementById('goals').value
+        };
+        
+        fetch('https://script.google.com/macros/s/AKfycbx4Ynk2bWVVCIVAw4KLQylE9bZvCCHxpLva8Gnv_Uv3r1zX3nabVt11iSs09TSqSXPmxg/exec', {
+            method: 'POST',
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Thank you! Your message has been submitted.');
+            document.getElementById('contactForm').reset();
+        })
+        .catch(error => {
+            alert('There was an error submitting your message. Please try again.');
+        })
+        .finally(() => {
+            // Reset button state
+            submitButton.disabled = false;
+            buttonText.textContent = 'Submit';
+            buttonLoader.classList.add('hidden');
         });
+    });
     </script>
 </body>
 </html>
