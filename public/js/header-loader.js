@@ -1,6 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // First try with absolute path
     fetch('/components/header.html')
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                // If absolute path fails, try relative path
+                return fetch('../components/header.html');
+            }
+            return response;
+        })
+        .then(response => {
+            if (!response.ok) {
+                // If neither path works, try one more option
+                return fetch('components/header.html');
+            }
+            return response;
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load header: ${response.status} ${response.statusText}`);
+            }
+            return response.text();
+        })
         .then(data => {
             // Insert the header at the start of the body
             document.body.insertAdjacentHTML('afterbegin', data);
@@ -53,5 +73,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         })
-        .catch(error => console.error('Error loading header:', error));
+        .catch(error => {
+            console.error('Error loading header:', error);
+            // Fallback to a simple header if loading fails
+            const fallbackHeader = `
+            <header>
+                <nav>
+                    <div class="logo"><a href="/">Joe Phair</a></div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/coaching">1:1 Coaching</a></li>
+                        <li><a href="/cohort">Cohort Program</a></li>
+                        <li><a href="https://modernmanrebirth.kit.com/profile" target="_blank">Blog</a></li>
+                    </ul>
+                </nav>
+            </header>`;
+            document.body.insertAdjacentHTML('afterbegin', fallbackHeader);
+        });
 }); 
