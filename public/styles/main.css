@@ -517,10 +517,10 @@ footer {
         word-wrap: break-word;
         -ms-word-break: break-all;
         word-break: break-word;
-        -ms-hyphens: auto;
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
+        -ms-hyphens: none;
+        -moz-hyphens: none;
+        -webkit-hyphens: none;
+        hyphens: none;
     }
     
     /* Improve touch targets for better mobile usability */
@@ -1954,14 +1954,14 @@ body.cohort-page h2 {
     text-shadow: 0 0 10px rgba(196, 169, 98, 0.5);
     word-wrap: break-word;
     overflow-wrap: break-word;
-    hyphens: auto;
+    hyphens: none;
     max-width: 100%;
 }
 
 body.cohort-page h3 {
     word-wrap: break-word;
     overflow-wrap: break-word;
-    hyphens: auto;
+    hyphens: none;
     max-width: 100%;
 }
 
@@ -1977,7 +1977,7 @@ body.cohort-page li {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
-    hyphens: auto;
+    hyphens: none;
 }
 
 /* Enhance card elements to be more cosmic */
